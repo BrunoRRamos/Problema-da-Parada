@@ -25,7 +25,7 @@ function s(argS) {
 function criaParadoxo(boolean) {
     console.log(chalk.magenta("Criando paradoxo:"))
     console.log(chalk.blackBright(chalk.cyan("Entrada fornecida"), chalk.white(boolean), "\n"));
-    
+
     stopped(boolean) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"));
 
     if(s(s(boolean)) === false) {
@@ -46,4 +46,4 @@ console.log(chalk.yellow("Se stopped for false o programa entra em loop."))
 stopped(false) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
 s(false) ? console.log(chalk.green("true\n")) : console.log(chalk.redBright("false\n"))
 
-criaParadoxo(false)
+criaParadoxo(true)
