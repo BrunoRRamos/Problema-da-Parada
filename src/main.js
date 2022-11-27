@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import { exit } from "process";
+import fs from "fs";
 
 function setStop(arg) {
     if (arg) {
@@ -30,12 +31,12 @@ function criaParadoxo(boolean) {
 
     if(s(s(boolean)) === false) {
         s(boolean) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
-        console.log(chalk.yellow("Encerra"))
+        console.log(chalk.yellow("Encerrou a execução"))
         exit(0);
     }
 
     s(boolean) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
-    console.log(chalk.yellow("Quebrou"))
+    console.log(chalk.yellow("Entrou em loop"))
 }
 
 console.log(chalk.yellow("Se stopped for true o programa encerra."))
@@ -46,6 +47,7 @@ console.log(chalk.yellow("Se stopped for false o programa entra em loop."))
 stopped(false) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
 s(false) ? console.log(chalk.green("true\n")) : console.log(chalk.redBright("false\n"))
 
-const arg = true
+let arg = process.argv;
+arg[2] === "true" ? arg = true : arg = false;
 criaParadoxo(arg)
 
