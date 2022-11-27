@@ -46,4 +46,6 @@ console.log(chalk.yellow("Se stopped for false o programa entra em loop."))
 stopped(false) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
 s(false) ? console.log(chalk.green("true\n")) : console.log(chalk.redBright("false\n"))
 
-criaParadoxo(true)
+const arg = true
+criaParadoxo(arg)
+
