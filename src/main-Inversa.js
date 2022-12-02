@@ -24,22 +24,21 @@ function s(argS) {
     return false;
 }
 
-function criaParadoxo(boolean) {
-    console.log(chalk.magenta("Criando paradoxo:"))
+function visualizaProblema(boolean) {
+    console.log(chalk.magenta("Criando situação:"))
     console.log(chalk.blackBright(chalk.cyan("Entrada fornecida"), chalk.white(boolean), "\n"));
-
-    stopped(boolean) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"));
+    stopped(boolean) ? console.log(chalk.cyan("Saída de Stopped:"), chalk.green("true")) : console.log(chalk.cyan("Saída de Stopped:"), chalk.redBright("false"));
 
     if(s(s(boolean)) === false) {
-        s(boolean) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
-        console.log(chalk.yellow("Encerrou a execução"))
+        s(boolean) ? console.log(chalk.cyan("Saída de S:"), chalk.green("true")) : console.log(chalk.cyan("Saída de S:"), chalk.redBright("false"));
+        console.log(chalk.yellow("Encerrou a execução"));
         exit(0);
     }
 
-    s(boolean) ? console.log(chalk.green("true")) : console.log(chalk.redBright("false"))
+    s(boolean) ? console.log(chalk.cyan("Saída de S:"), chalk.green("true")) : console.log(chalk.cyan("Saída de S:"), chalk.redBright("false"))
     console.log(chalk.yellow("Entrou em loop"))
 }
 
 let arg = process.argv;
 arg[2] === "true" ? arg = true : arg = false;
-criaParadoxo(arg)
+visualizaProblema(arg)
