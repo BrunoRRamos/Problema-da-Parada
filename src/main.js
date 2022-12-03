@@ -25,13 +25,13 @@ function s(argS) {
 
 //Entrada: true
 console.log(chalk.cyan("Entrada:", chalk.green("true\n")))
-console.log(chalk.yellow("Se stopped for true o programa encerra."))
+console.log(chalk.yellow("Stopped o programa encerra."))
 stopped(true) ? console.log(chalk.magenta("Stopped:"), chalk.green("true")) : console.log(chalk.magenta("Stopped:"), chalk.redBright("false"))
-s(true) ? console.log(chalk.magenta("s:"), chalk.green("true\n")) : console.log(chalk.magenta("s:"), chalk.redBright("false\n"))
+s(true) ? console.log(chalk.magenta("saída:"), chalk.green("true\n")) : console.log(chalk.magenta("saída:"), chalk.redBright("false\n"))
 console.log(chalk.gray("----------------------------------------------\n"))
 
 //Entrada: false
 console.log(chalk.cyan("Entrada:", chalk.redBright("false\n")))
-console.log(chalk.yellow("Se stopped for false o programa entra em loop."))
+console.log(chalk.yellow("Stopped o programa entra em loop."))
 stopped(false) ? console.log(chalk.magenta("Stopped: "), chalk.green("true")) : console.log(chalk.magenta("Stopped:"), chalk.redBright("false"))
-s(false) ? console.log(chalk.magenta("s:"), chalk.green("true\n")) : console.log(chalk.magenta("s:"), chalk.redBright("false\n"))
+s(false) ? console.log(chalk.magenta("saída:"), chalk.green("true\n")) : console.log(chalk.magenta("saída:"), chalk.redBright("false\n"))
